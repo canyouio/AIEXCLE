@@ -1,5 +1,5 @@
 <div align="center">
-  ![ExcelGenius Logo](./docs/img/logo.png)
+  <img src="./docs/img/logo.png" alt="ExcelGenius Logo" width="200" />
   ExcelGenius 是一款基于AI的智能Excel生成与编辑工具，能够通过自然语言描述快速创建和修改Excel表格，大大提高办公效率。
 </div>
 
