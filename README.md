@@ -1,24 +1,8 @@
 <div align="center">
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./docs/img/banner-light.png">
-    <img src="./docs/img/banner-dark.png" alt="ExcelGenius" width="400" />
-</picture>
-
-ExcelGenius 是一款基于AI的智能Excel生成与编辑工具，能够通过自然语言描述快速创建和修改Excel表格，大大提高办公效率。<br />
-**AI驱动 · 高效便捷 · 直观可视化**<br />
-
-[![][github-license-shield]][github-license-link]
-[![][github-actions-shield]][github-actions-link]
-[![][github-stars-shield]][github-stars-link]
-[![][github-contributors-shield]][github-contributors-link] <br />
-[![][github-forks-shield]][github-forks-link]
-[![][github-issues-shield]][github-issues-link]
-[![][codecov-shield]][codecov-link]
-[![][codefactor-shield]][codefactor-link]
-[![][discord-shield]][discord-link]
-
+  ![ExcelGenius Logo](./docs/img/logo.png)
+  ExcelGenius 是一款基于AI的智能Excel生成与编辑工具，能够通过自然语言描述快速创建和修改Excel表格，大大提高办公效率。
 </div>
+
 
 通过AI自然语言描述驱动Excel生成，实现智能化办公体验。
 
@@ -131,7 +115,7 @@ pip install -r requirements.txt
 
 4. 启动后端服务
 ```bash
-python main.py
+python -m uvicorn backend.main:app --reload --port 8000
 ```
 
 后端服务默认运行在 `http://127.0.0.1:8000`
@@ -194,24 +178,13 @@ ExcelGenius集成了完善的监控系统，帮助您实时掌握应用的运行
 - Excel生成/编辑性能指标
 - 错误日志监控
 
-#### 照片放置位置说明
-
-为了在README中展示项目演示和Grafana看板，请将照片放在以下位置：
-- 项目演示照片：`./docs/img/examples-demo.gif` 或 `./docs/img/examples-demo.png`
-- Grafana看板照片：`./docs/img/grafana-dashboard.png`
-
-添加照片后，可以在README中使用如下格式引用：
-```markdown
-## 👾 项目演示
-
-[![][examples-demo-preview]][examples-demo-link]
+## 🐱 项目演示
+<!-- 直接展示项目演示图，宽度设为 600px 更清晰 -->
+<img src="docs/img/examples-demo.png" alt="项目首页" width="600" />
 
 ## 📊 Grafana 监控看板
-
-[![][grafana-dashboard-preview]][grafana-dashboard-link]
-```
-
-并在文件底部的Links部分添加相应的链接定义。
+<!-- 直接展示Grafana看板图 -->
+<img src="docs/img/grafana-dashboard.png" alt="Grafana看板" width="600" />
 
 ## 💻 使用说明
 
