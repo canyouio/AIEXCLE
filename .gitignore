@@ -1,0 +1,194 @@
+# ==============================================================================
+# ExcelGenius - 项目标准 .gitignore 文件
+# 该文件遵循业界最佳实践，确保所有不应纳入版本控制的文件和目录都被正确排除
+# ==============================================================================
+
+### 通用规则：禁止提交依赖、构建产物、缓存和临时文件 ###
+
+# ========= 前端 (Vue/Node.js) 相关 =========
+# 依赖目录（必须排除，可通过 package.json 重新安装）
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+.pnp.*
+
+# 构建产物（必须排除，应在构建环境重新生成）
+/dist
+/dist-ssr
+/build
+*.local
+
+# 依赖锁定文件（可选：根据团队规范决定是否保留）
+# 保留有助于确保所有开发者使用相同版本的依赖
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 前端调试日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ========= 后端 (Python) 相关 =========
+# 虚拟环境目录（必须排除，可通过 requirements.txt 重新创建）
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python 运行缓存和编译文件（必须排除）
+__pycache__/
+*.py[cod]
+*$py.class
+*.so  # Python C 扩展文件
+
+# Python 打包相关文件（必须排除）
+.Python
+build/
+dist/
+dist-egg/
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python 测试相关（可选：根据团队规范决定是否保留测试报告）
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+pytestdebug.log
+.pytest_cache/
+cover/
+
+# Python 类型检查缓存
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+cython_debug/
+
+# ========= 开发工具和编辑器配置 =========
+# 编辑器配置（可选：根据团队规范决定是否保留）
+.vscode/*
+!.vscode/extensions.json  # 推荐保留：确保团队使用相同的推荐插件
+!.vscode/settings.json     # 可选保留：共享基础设置但不覆盖个人配置
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Spyder 编辑器配置
+.spyderproject
+.spyproject
+.ropeproject
+
+# ========= 敏感信息和环境配置 =========
+# 环境变量文件（必须排除，包含敏感信息如API密钥）
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# 证书和密钥文件（必须排除）
+*.pem
+*.key
+*.cert
+
+# ========= 运行时数据和日志 =========
+# 日志文件和目录（必须排除，包含运行时信息）
+logs/
+*.log
+*.log.*
+
+# 运行时数据（必须排除）
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ========= 临时文件和目录 =========
+# 临时文件（必须排除）
+*.swp
+*.swo
+*~
+
+# 系统生成文件（必须排除）
+Thumbs.db
+.DS_Store
+
+# 临时目录（必须排除）
+tmp/
+temp/
+tempdir/
+tmp.*
+
+# ========= ExcelGenius 项目专属规则 =========
+# 项目特定临时文件（必须排除）
+/temp/  # Excel缓存、临时导出文件等
+/upload_temp/  # 文件上传临时目录
+
+# 项目特定日志（必须排除）
+/logs/  # Excel处理日志、接口请求日志等
+
+# 项目特定配置（可选：根据团队规范决定是否排除）
+# 如果包含敏感信息，应移至环境变量文件中
+
+# ========= 其他工具相关 =========
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# 国际化相关
+*.mo
+*.pot
+
+# ==============================================================================
+# 重要提示：
+# 1. 该 .gitignore 文件应在项目初始化时创建，并确保在首次 git add 前就位
+# 2. 如果已意外提交了应排除的文件（如 node_modules），请使用 git rm -r --cached 命令移除
+# 3. 定期检查和更新 .gitignore 文件，以适应项目需求变化
+# ==============================================================================

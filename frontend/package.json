@@ -1,0 +1,40 @@
+{
+  "name": "excel-genius-frontend",
+  "version": "1.0.0",
+  "description": "ExcelGenius前端页面 - 智能Excel生成与编辑工具",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "element-plus": "^2.4.2",
+    "axios": "^1.4.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "vite": "^4.4.5"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "keywords": [
+    "excel",
+    "ai",
+    "vue3",
+    "element-plus",
+    "smart-tool"
+  ],
+  "author": "ExcelGenius Team",
+  "license": "MIT"
+}
