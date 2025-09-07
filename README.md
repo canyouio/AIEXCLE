@@ -72,6 +72,7 @@ ExcelGenius采用前后端分离的现代化架构设计，确保系统的可扩
 ├── logstash/                 # 日志处理配置
 ├── prometheus.yml            # Prometheus监控配置
 └── excelgenius_monitoring_dashboard.json # Grafana看板配置
+```
 ---
 
 ## 🔧 技术栈
