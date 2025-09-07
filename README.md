@@ -51,8 +51,7 @@ ExcelGenius 是一款由AI驱动的智能Excel生成与编辑工具，致力于�
 
 ExcelGenius采用前后端分离的现代化架构设计，确保系统的可扩展性和可维护性。
 
-```text
-.
+```
 ├── backend/                  # 后端服务 (Python)
 │   ├── config.py             # 配置 (AI模型选择、端口)
 │   ├── excel_utils.py        # Excel生成/编辑工具类
