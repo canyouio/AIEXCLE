@@ -101,7 +101,7 @@ ExcelGenius采用前后端分离的现代化架构设计，确保系统的可扩
 
 - Python 3.12+
 - Node.js 20.0+
-- OpenAI API 密钥 (可选，若不提供将使用模拟数据)
+- DeepSeek API 密钥 (可选，若不提供将使用模拟数据)
 - Prometheus & Grafana (用于监控功能)
 
 #### 后端安装与运行
