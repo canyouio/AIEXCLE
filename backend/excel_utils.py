@@ -1,7 +1,6 @@
 import os
 import random
 import time
-import os
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Font, Alignment, Border, Side
 from openpyxl.utils import get_column_letter

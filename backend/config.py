@@ -40,13 +40,12 @@ class Config:
         
         # 目录配置
         self.BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        # 根据用户要求，将临时目录设置为E:/ExcelGenius/temp
-        self.TEMP_DIR = "E:/ExcelGenius/temp"
-        
+        # 使用相对路径
+        self.TEMP_DIR = os.path.join(self.BASE_DIR, "temp")
         # 确保临时目录存在
         if not os.path.exists(self.TEMP_DIR):
             os.makedirs(self.TEMP_DIR)
-            
+        
         # Excel配置
         self.EXCEL_DEFAULT_SHEET = "Sheet1"
         self.EXCEL_MAX_ROWS = int(os.getenv("EXCEL_MAX_ROWS", "1000"))
