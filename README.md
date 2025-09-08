@@ -114,9 +114,9 @@ ExcelGenius采用前后端分离的现代化架构设计，确保系统的可扩
     ```bash
     pip install -r requirements.txt
     ```
-3.  **配置环境变量 (可选)**
-    - 创建 `.env` 文件。
-    - 在文件中添加 `DEEPSEEK_API_KEY="您的API密钥"`。
+3.  **配置环境变量 **
+    - 修改 `.env` 文件。
+    - 在.env文件中修改 `DEEPSEEK_API_KEY="您的API密钥"`。
 4.  **启动后端服务**
     ```bash
     uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
