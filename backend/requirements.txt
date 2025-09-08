@@ -1,9 +1,11 @@
 # ExcelGenius后端依赖
 
-fastapi>=0.95.0
-uvicorn>=0.22.0
-requests>=2.31.0
-python-dotenv>=1.0.0
-openpyxl>=3.1.0
-pydantic>=2.0.0
-six>=1.16.0
+fastapi>=0.95.0  
+uvicorn>=0.22.0  
+requests>=2.31.0  
+python-dotenv>=1.0.0  
+openpyxl>=3.1.0  
+pydantic>=2.0.0  
+six>=1.16.0  
+prometheus-client>=0.16.0  
+python-multipart>=0.0.6
