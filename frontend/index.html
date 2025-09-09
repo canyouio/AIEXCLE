@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExcelGenius - 智能Excel生成与编辑工具</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Element Plus样式通过main.js导入 -->
+    
+    <!-- Tailwind CSS 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#409EFF',
+                        success: '#67C23A',
+                        warning: '#E6A23C',
+                        danger: '#F56C6C',
+                        info: '#909399',
+                        light: '#F5F7FA',
+                        dark: '#303133'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'move-background': 'moveBackground 60s linear infinite',
+                    },
+                    keyframes: {
+                        moveBackground: {
+                            '0%': { backgroundPosition: '0% 0%' },
+                            '100%': { backgroundPosition: '0% -1000%' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 自定义工具类 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .shadow-soft {
+                box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+            }
+            .transition-smooth {
+                transition: all 0.3s ease;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            
+            /* iOS液态玻璃效果工具类 */
+            .glass-effect {
+                position: relative;
+                isolation: isolate;
+            }
+            
+            .glass-effect::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                border-radius: inherit;
+                box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+            }
+            
+            .glass-effect::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                border-radius: inherit;
+                backdrop-filter: blur(0px);
+                filter: url(#container-glass);
+                overflow: hidden;
+                isolation: isolate;
+            }
+            
+            .glass-btn {
+                position: relative;
+                z-index: 0;
+            }
+            
+            .glass-btn::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                z-index: 0;
+                overflow: hidden;
+                border-radius: inherit;
+                box-shadow: inset 2px 2px 0px -2px rgba(255, 255, 255, 0.7), inset 0 0 3px 1px rgba(255, 255, 255, 0.7);
+                background-color: rgb(255 255 255 / 10%);
+            }
+            
+            .glass-btn::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                inset: 0;
+                border-radius: inherit;
+                backdrop-filter: blur(0px);
+                filter: url(#btn-glass);
+                overflow: hidden;
+                isolation: isolate;
+            }
+        }
+    </style>
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        body {
+            font-family: sans-serif;
+            font-weight: 300;
+        }
+        #app {
+            height: 100%;
+        }
+    </style>
+    
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #app {
+            height: 100%;
+            position: relative;
+        }
+    </style>
+
+
+
+
+</head>
+<body class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 font-sans">
+    <!-- iOS风格光晕背景 -->
+    <div class="fixed inset-0 bg-gradient-to-br from-blue-50/80 via-indigo-50/60 to-purple-50/80 z-0"></div>
+    <div class="fixed top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-violet-300/40 to-blue-300/40 rounded-full blur-3xl z-0"></div>
+    <div class="fixed bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-300/40 to-pink-300/40 rounded-full blur-3xl z-0"></div>
+    
+    <div id="app" class="relative z-10"></div>
+    
+    <!-- iOS液态玻璃效果SVG过滤器 -->
+    <svg style="display: none">
+      <filter id="container-glass" x="0%" y="0%" width="100%" height="100%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.008 0.008" numOctaves="2" seed="92" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.02" result="blur" />
+        <feDisplacementMap in="SourceGraphic" in2="blur" scale="77" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="btn-glass" primitiveUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0.01 0.01" numOctaves="2" seed="56" result="noise" />
+        <feGaussianBlur in="noise" stdDeviation="0.02" result="blur" />
+        <feDisplacementMap in="SourceGraphic" in2="blur" scale="10" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+    
+    <!-- Vue、Element Plus和Axios通过main.js导入 -->
+    
+    <!-- 引入前端入口脚本 -->
+    <script type="module" src="/src/main.js"></script>
+
+
+    
+</body>
+</html>

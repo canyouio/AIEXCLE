@@ -1,0 +1,30 @@
+# ExcelGenius后端依赖
+
+# Web框架与服务器
+fastapi>=0.95.0
+uvicorn>=0.22.0
+python-multipart>=0.0.6
+
+# 数据处理与Excel操作
+openpyxl>=3.1.0
+pyexcelerate>=0.7.0  # 可选，用于快速写入大型xlsx文件
+
+# 数据验证
+pydantic>=2.0.0
+
+# 配置管理
+python-dotenv>=1.0.0
+
+# 网络请求
+requests>=2.31.0
+websockets>=11.0.3
+
+# 监控与指标
+prometheus-client>=0.16.0
+
+# 缓存
+redis>=4.5.0
+
+# 其他工具
+six>=1.16.0
+
