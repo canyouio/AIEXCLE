@@ -1,248 +1,222 @@
 <div align="center">
-  <img src="./docs/img/logo.png" alt="ExcelGenius Logo" width="200" />
-  <h1>ExcelGenius</h1>
-  <p>
-    <strong>一款基于AI的智能Excel生成与编辑工具，能够通过自然语言描述快速创建和修改Excel表格，大大提高办公效率。</strong>
+  <a href="https://gitee.com/yafengke/excel-genius">
+    <img src="./docs/img/logo.png" alt="ExcelGenius Logo" width="200" />
+  </a>
+  <h1 align="center">ExcelGenius</h1>
+  <p align="center">
+    <strong>:zap: 一款由AI驱动的智能Excel生成、编辑与分析工具，助您通过自然语言驰骋于数据世界。</strong>
   </p>
-  <p>
-    <a href="https://gitee.com/yafengke/excel-genius/stargazers"><img src="https://gitee.com/yafengke/excel-genius/badge/star.svg?theme=dark" alt="star"></a>
-    <a href="https://gitee.com/yafengke/excel-genius/blob/master/LICENSE"><img src="https://img.shields.io/github/license/dream-num/excelgenius?style=flat-square" alt="license"></a>
-    <a href="https://github.com/dream-num/excelgenius/actions/workflows/build.yml"><img src="https://img.shields.io/github/actions/workflow/status/dream-num/excelgenius/build.yml?style=flat-square" alt="build"></a>
+  <p align="center">
+    <a href="https://gitee.com/yafengke/excel-genius/stargazers"><img src="https://gitee.com/yafengke/excel-genius/badge/star.svg?theme=dark" alt="Gitee star"></a>
+    <a href="https://gitee.com/yafengke/excel-genius/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" alt="Python Version"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Vue.js-3.x-green?logo=vue.js" alt="Vue.js Version"></a>
+    <a href="#"><img src="https://img.shields.io/badge/FastAPI-latest-teal?logo=fastapi" alt="FastAPI"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Univer.js-latest-orange" alt="Univer.js"></a>
   </p>
 </div>
 
+---
+
+### :sparkles: 目录 (Table of Contents)
+
+- [📖 项目简介](#-项目简介)
+- [✨ 为什么选择 ExcelGenius?](#-为什么选择-excelgenius)
+- [💡 详细文档分析](#-详细文档分析)
+- [🏗️ 项目架构](#️-项目架构)
+- [🔧 技术栈](#-技术栈)
+- [🛠️ 快速开始](#️-快速开始)
+- [📊 API 端点](#-api-端点)
+- [📈 监控系统](#-监控系统)
+- [💻 项目演示](#-项目演示)
+- [🗺️ 未来路线图 (Roadmap)](#️-未来路线图-roadmap)
+- [🤝 贡献指南](#-贡献指南)
+- [📄 开源许可](#-开源许可)
+
+---
+
 ## 📖 项目简介
 
-ExcelGenius 是一款由AI驱动的智能Excel生成与编辑工具，致力于通过自然语言交互，为用户带来前所未有的智能化办公体验。告别繁琐的手动操作，让Excel处理变得轻松高效。
-可通过点击 <a href="https://deepwiki.com/canyouio/ExcelGenius" target="_blank">https://deepwiki.com/canyouio/ExcelGenius</a> 查看项目的详细文档分析，获取更全面的功能解读与使用指南。
+**ExcelGenius** 是一款将大型语言模型（LLM）与现代Web技术深度融合的智能数据处理工作台。它彻底颠覆了传统的Excel操作模式，旨在：
+
+1.  **赋能所有人：** 无论你是否精通Excel，现在都可以通过简单的自然语言对话，完成从数据生成到深度分析的全流程操作。
+2.  **效率革命：** 将过去需要数小时手动操作和编写公式的复杂任务，压缩到几次点击和几句话之内。
+3.  **提供洞察：** 不仅仅是处理数据，更是利用AI从数据中挖掘潜在的商业价值、趋势和异常，为您提供决策支持。
+
+项目核心集成了顶级的开源在线表格引擎 **[Univer.js](https://univer.ai/)**，确保了流畅、专业、可扩展的在线编辑体验。
 
 ---
 
-## 🌈 项目亮点
+## ✨ 为什么选择 ExcelGenius?
 
-- 🧠 **AI驱动**：通过自然语言描述快速生成和编辑Excel表格，无需手动操作。
-- 🚀 **高效便捷**：极大提升办公效率，降低Excel操作的学习成本。
-- 📊 **可视化编辑**：提供直观的表格编辑界面，支持基本的编辑和格式设置。
-- 🔌 **灵活扩展**：模块化设计，易于扩展新功能和集成其他AI服务。
-- 🔧 **监控系统**：集成Prometheus和Grafana监控，实时跟踪应用性能。
-- 🖥️ **前后端分离**：基于FastAPI和Vue3的现代化架构，提供流畅的用户体验。
-- 📱 **多平台兼容**：支持在不同操作系统和设备上使用。
+| 特性 | 传统方式 | **ExcelGenius 方式** |
+| :--- | :--- | :--- |
+| **创建表格** | 手动输入标题、调整格式、填充数据 | :speech_balloon: **一句话描述**: "创建一个包含员工姓名、部门、职位、入职日期和薪资的表格" |
+| **数据分析** | 筛选、排序、编写复杂的`VLOOKUP`, `SUMIF`公式, 创建数据透视表 | :mag_right: **一键上传**: AI自动分析数据，生成**摘要、洞察、趋势、异常**和**可视化图表** |
+| **在线编辑** | 需要昂贵的Office 365订阅或功能受限的Web版 | :computer: **高性能在线编辑**: 由Univer.js驱动，提供流畅的编辑、保存和实时反馈 |
+| **系统监控** | 需要专业的运维知识来配置和搭建 | :chart_with_upwards_trend: **开箱即用**: 集成Prometheus & Grafana，提供覆盖全链路的专业级监控仪表盘 |
 
 ---
 
-## ✨ 功能特性
+## 💡 详细文档分析
 
-### 📊 Excel生成与分析
+您可以通过点击下方链接，查看由AI驱动生成的、对本项目代码的全面深度分析文档，以获取更完整的技术解读、设计思路与使用指南。
 
-- **自然语言生成Excel**：通过简单的文字描述，快速生成符合需求的Excel表格。
-- **智能编辑现有Excel**：上传Excel文件后，通过自然语言指令进行编辑操作。
-- **模拟数据模式**：在没有Deepseek API密钥的情况下，使用内置的模拟数据展示功能。
-
-### 🔧 系统功能
-
-- **文件管理**：支持Excel文件的上传分析、下载和临时存储。
-- **配置管理**：灵活的配置选项，支持模型选择和端口设置。
-- **异常处理**：完善的错误处理和提示机制。
-- **监控集成**：与Prometheus和Grafana无缝集成，提供实时性能监控。
+> **:link: 查看详细文档分析: <a href="https://deepwiki.com/canyouio/ExcelGenius" target="_blank">https://deepwiki.com/canyouio/ExcelGenius</a>**
 
 ---
 
 ## 🏗️ 项目架构
 
-ExcelGenius采用前后端分离的现代化架构设计，确保系统的可扩展性和可维护性。
+ExcelGenius采用前后端分离的现代化架构，确保了高度的可扩展性和可维护性。
 
 ```
-├── backend/                  # 后端服务 (Python)
-│   ├── config.py             # 配置 (AI模型选择、端口)
-│   ├── excel_utils.py        # Excel生成/编辑工具类
+├── backend/                  # 后端服务 (Python, FastAPI)
+│   ├── config.py             # 配置模块 (AI模型, API密钥, 端口)
+│   ├── excel_utils.py        # Excel核心工具 (读/写, 模拟数据)
 │   ├── logger_config.py      # 日志配置
-│   ├── main.py               # 核心API (自然语言解析、Excel生成)
+│   ├── main.py               # 主API服务 (生成, 编辑, 分析, 保存)
 │   └── requirements.txt      # Python依赖
-├── frontend/                 # 前端页面 (Vue3)
-│   ├── public/               # 公共资源
+├── frontend/                 # 前端应用 (Vue 3, Vite)
+│   ├── public/               # 公共静态资源
 │   ├── src/                  # 前端源码
-│   │   ├── api/              # API请求工具
-│   │   ├── assets/           # 静态资源
-│   │   ├── components/       # Vue组件
+│   │   ├── api/              # API请求封装 & 日志上报
+│   │   ├── assets/           # 静态资源 (图片, 全局CSS)
+│   │   ├── components/       # Vue核心组件 (主面板, 弹窗, Univer编辑器)
 │   │   ├── App.vue           # 根组件
-│   │   └── main.js           # 前端入口逻辑
-│   ├── index.html            # 入口页面
-│   ├── package.json          # 前端依赖配置
+│   │   └── main.js           # 前端入口
+│   ├── index.html            # HTML入口
+│   ├── package.json          # 前端依赖
 │   └── vite.config.js        # Vite构建配置
-├── logstash/                 # 日志处理配置
+├── logstash/                 # 日志聚合配置 (可选)
 ├── prometheus.yml            # Prometheus监控配置
-└── excelgenius_monitoring_dashboard.json # Grafana看板配置
+└── excelgenius_monitoring_dashboard.json # Grafana预设仪表盘
 ```
+
 ---
 
 ## 🔧 技术栈
 
-| 分类       | 技术                                        |
-| ---------- | ------------------------------------------- |
-| **后端**   | Python, FastAPI, OpenAI API, openpyxl       |
-| **前端**   | Vue 3, Element Plus, Tailwind CSS, Axios, XLSX.js |
-| **构建工具** | Vite                                        |
-| **监控系统** | Prometheus, Grafana                         |
-| **日志管理** | Logstash                                    |
+| 分类 | 技术 |
+| :--- | :--- |
+| **后端** | `Python`, `FastAPI`, `DeepSeek API`, `openpyxl`, `uvicorn` |
+| **前端** | `Vue 3`, `Vite`, `Univer.js`, `Chart.js`, `Element Plus`, `Tailwind CSS`, `Axios` |
+| **可观测性** | `Prometheus`, `Grafana`, `Logstash` (可选) |
+| **开发工具** | `VS Code`, `Git`, `Pip`, `NPM` |
 
 ---
 
-## 🚀 快速开始
+## 🛠️ 快速开始
 
-### 1. Vercel一键部署 (推荐)
+### 环境准备
 
-[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://gitee.com/yafengke/excel-genius)
+- Python 3.10+ & Pip
+- Node.js 18.0+ & NPM
+- [Git](https://git-scm.com/)
 
-点击上方按钮，即可轻松将ExcelGenius部署到Vercel平台。
+### 安装与运行
 
-### 2. 本地部署
+#### 1. 克隆仓库
 
-**环境准备：**
+```bash
+git clone https://gitee.com/yafengke/excel-genius.git
+cd excel-genius
+```
 
-- Python 3.12+
-- Node.js 20.0+
-- DeepSeek API 密钥 (可选，若不提供将使用模拟数据)
-- Prometheus & Grafana (用于监控功能)
+#### 2. 启动后端服务
 
-#### 后端安装与运行
+```bash
+cd backend
 
-1.  **进入后端目录**
-    ```bash
-    cd backend
-    ```
-2.  **安装依赖**
-    ```bash
-    pip install -r requirements.txt
-    ```
-3.  **配置环境变量 **
-    - 修改 `.env` 文件。
-    - 在.env文件中修改 `DEEPSEEK_API_KEY="您的API密钥"`。
-4.  **启动后端服务**
-    ```bash
-    uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
-    ```
-    服务将运行在 `http://127.0.0.1:8000`。
+# (推荐) 创建并激活Python虚拟环境
+python -m venv venv
+source venv/bin/activate  # on Windows use `venv\Scripts\activate`
 
-#### 前端安装与运行
+# 安装依赖
+pip install -r requirements.txt
 
-1.  **进入前端目录**
-    ```bash
-    cd frontend
-    ```
-2.  **安装依赖**
-    ```bash
-    npm install
-    ```
-3.  **启动前端开发服务器**
-    ```bash
-    npm run dev
-    ```
-    前端页面将运行在 `http://127.0.0.1:3001`。
+# 配置环境变量 (如果需要使用AI分析)
+# 编辑 .env 文件并填入你的 DEEPSEEK_API_KEY
+# DEEPSEEK_API_KEY="YOUR_API_KEY_HERE"
+
+# 启动服务
+uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
+```
+:white_check_mark: 后端服务现在应该运行在 `http://127.0.0.1:8000`。
+
+#### 3. 启动前端服务
+
+*打开一个新的终端窗口*
+```bash
+cd frontend
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+```
+:white_check_mark: 前端应用现在应该运行在 `http://localhost:3001` (或终端提示的其他端口)。在浏览器中打开它即可开始使用！
 
 ---
 
 ## 📊 API 端点
 
-| 方法   | 路径                  | 描述             |
-| ------ | --------------------- | ---------------- |
-| `POST` | `/generate_excel`     | 根据文本描述生成Excel |
-| `POST` | `/edit_excel`         | 上传并根据指令编辑Excel |
-| `GET`  | `/download/{file_name}` | 下载指定的Excel文件   |
+| 方法   | 路径                  | 描述                       |
+| ------ | --------------------- | -------------------------- |
+| `POST` | `/generate_excel`     | 根据文本描述生成Excel并返回数据 |
+| `POST` | `/analyze_excel`      | 上传Excel并返回AI分析报告   |
+| `POST` | `/api/excel/save_data`| 保存修改后的在线表格数据     |
+| `GET`  | `/download/{file_name}` | 下载服务器端的指定Excel文件 |
 
 ---
 
 ## 📈 监控系统
 
-ExcelGenius集成了完善的监控系统，助您实时掌握应用的运行状态。
-
-### Prometheus 配置
-
-项目根目录下的 `prometheus.yml` 文件包含了详细的监控配置，主要监控目标包括：
-- Prometheus自身
-- ExcelGenius后端服务 (端口 `8000`)
-- Windows系统资源 (通过 `windows-exporter`，端口 `9182`)
-
-### Grafana 看板
-
-我们提供了预配置的Grafana看板文件 `excelgenius_monitoring_dashboard.json`，导入后即可获得丰富的监控视图：
-- 系统资源使用情况 (CPU, 内存, 磁盘)
-- API请求统计 (QPS, 延迟)
-- Excel生成/编辑性能指标
-- 错误日志监控
+通过预置的 `prometheus.yml` 和 `excelgenius_monitoring_dashboard.json` 文件，您可以轻松搭建覆盖应用全链路的监控仪表盘，实时洞察系统性能。
 
 ---
 
-## 🐱 项目演示
+## 💻 项目演示
 
 <div align="center">
-  <img src="docs/img/examples-demo.png" alt="项目首页" width="700" />
-  <p><em>项目首页</em></p>
+  <img src="./docs/img/examples-demo.png" alt="项目首页" width="700" />
+  <p><em>项目主界面与智能分析</em></p>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="docs/img/grafana-dashboard.png" alt="Grafana看板" width="700" />
+  <img src="./docs/img/grafana-dashboard.png" alt="Grafana看板" width="700" />
   <p><em>Grafana 监控看板</em></p>
 </div>
 
 ---
 
-## 💻 使用说明
+## 🗺️ 未来路线图 (Roadmap)
 
-### 生成Excel
-1.  在首页的"**生成Excel**"标签页中，输入您想要的Excel内容描述。
-2.  (可选) 输入自定义文件名。
-3.  点击"**生成Excel**"按钮。
-4.  生成完成后，可以**下载文件**或在**表格编辑器**中查看。
+我们对ExcelGenius的未来充满期待！以下是我们计划中的一些功能：
 
-### 编辑Excel
-1.  在首页的"**编辑Excel**"标签页中，选择要编辑的Excel文件。
-2.  输入编辑指令，例如："在表格末尾添加一行汇总数据"。
-3.  点击"**编辑Excel**"按钮。
-4.  编辑完成后，可以**下载文件**或在**表格编辑器**中查看。
-
-### excel分析
-1.  自动识别表格数据类型（如数值型、类别型），提供推荐分析维度；
-2.   支持生成多种图表（折线图、柱状图、饼图、散点图等），直观展示数据趋势、分布或对比关系；
-3.   可按需选择分析列、调整图表类型及参数，支持图表导出。
+- [ ] **增强的AI能力**
+  - [ ] 支持通过自然语言生成**图表**
+  - [ ] 支持通过自然语言**执行公式计算**
+  - [ ] 支持更复杂的Excel文件结构（多Sheet页）
+- [ ] **在线协作**
+  - [ ] 基于WebSocket实现**多人实时协同编辑**
+- [ ] **用户系统**
+  - [ ] 用户注册与登录
+  - [ ] 文件的云端持久化存储
+- [ ] **容器化部署**
+  - [ ] 提供完整的 `docker-compose.yml` 文件，实现一键部署整个技术栈（包括Prometheus, Grafana）
 
 ---
 
-## ⚠️ 注意事项
+## 🤝 贡献指南
 
-1.  **OpenAI API 密钥**：如果没有配置有效的OpenAI API密钥，系统将自动切换到**模拟数据模式**。
-2.  **文件存储**：生成和编辑的Excel文件默认存储在项目的 `temp` 目录中。
-3.  **模拟数据模式**：在此模式下，系统会根据描述生成预定义的示例数据，仅供演示使用。
-4.  **安全性**：请勿在公共环境中暴露包含敏感信息的API密钥。
+我们热烈欢迎所有形式的贡献！无论是**提交一个Issue**来报告Bug或提出功能建议，还是**提交一个Pull Request**来直接贡献代码，都将帮助ExcelGenius变得更好。
 
 ---
 
-### 部署建议
+## 📄 开源许可
 
-- **后端**：推荐使用 Uvicorn 或 Gunicorn 作为ASGI服务器。
-- **前端**：构建后的静态文件可以使用 Nginx 等Web服务器进行托管。
-- **监控系统**：可以与主应用一同部署，或独立部署。
-- **容器化**：建议使用 Docker 将整个应用容器化，以便于管理和迁移。
-
----
-
-## 🤝 贡献
-
-我们欢迎各种形式的贡献，您可以：
-- 提交Bug报告和功能请求
-- 改进文档和示例代码
-- 提交代码贡献 (Pull Request)
-- 分享您的使用经验和案例
-
----
-
-## ❤️ 赞助
-
-ExcelGenius 的持续发展离不开社区的支持。如果您觉得这个项目对您有帮助，请考虑成为我们的赞助者，您的支持是我们前进的最大动力！
-
----
-
-## 📄 许可
-
-本项目采用 [MIT License](./LICENSE) 开源许可。
+本项目基于 [MIT License](./LICENSE) 开源。
