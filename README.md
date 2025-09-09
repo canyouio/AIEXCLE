@@ -181,7 +181,7 @@ npm run dev
 
 <div align="center">
   <img src="./docs/img/examples-demo.png" alt="项目首页" width="700" />
-  <p><em>项目主界面与智能分析</em></p>
+  <p><em>项目 主界面与智能分析</em></p>
 </div>
 
 <br>
