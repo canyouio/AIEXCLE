@@ -5,7 +5,11 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
+<<<<<<< HEAD
         "distDir": "dist"
+=======
+        "distDir": "frontend/dist" 
+>>>>>>> 9cc3726031f6bf654ee562d2c07d67490cd0c362
       }
     },
     {
@@ -15,10 +19,17 @@
   ],
   "routes": [
     {
+<<<<<<< HEAD
+=======
+      "handle": "filesystem"
+    },
+    {
+>>>>>>> 9cc3726031f6bf654ee562d2c07d67490cd0c362
       "src": "/api/(.*)",
       "dest": "api/main.py"
     },
     {
+<<<<<<< HEAD
       "src": "/assets/(.*)",
       "dest": "/dist/assets/$1"
     },
@@ -28,3 +39,10 @@
     }
   ]
 }
+=======
+      "src": "/(.*)",
+      "dest": "frontend/"
+    }
+  ]
+}
+>>>>>>> 9cc3726031f6bf654ee562d2c07d67490cd0c362
