@@ -6,12 +6,16 @@
   <p align="center">
     <strong>:zap: 一款由AI驱动的智能Excel生成、编辑与分析工具，助您通过自然语言驰骋于数据世界。</strong>
   </p>
+  <!-- 【新增】在线体验 和 Vercel 部署徽章 -->
+  <p align="center">
+    <a href="http://kaaina.dpdns.org" target="_blank"><img src="https://img.shields.io/badge/Online-Demo-brightgreen?logo=vue.js&logoColor=white" alt="Online Demo"></a>
+    <a href="https://vercel.com/new/clone?repository-url=https://gitee.com/yafengke/excel-genius" target="_blank"><img src="https://vercel.com/button" alt="Deploy to Vercel"></a>
+  </p>
   <p align="center">
     <a href="https://gitee.com/yafengke/excel-genius/stargazers"><img src="https://gitee.com/yafengke/excel-genius/badge/star.svg?theme=dark" alt="Gitee star"></a>
     <a href="https://gitee.com/yafengke/excel-genius/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
     <a href="#"><img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" alt="Python Version"></a>
     <a href="#"><img src="https://img.shields.io/badge/Vue.js-3.x-green?logo=vue.js" alt="Vue.js Version"></a>
-    <a href="#"><img src="https://img.shields.io/badge/FastAPI-latest-teal?logo=fastapi" alt="FastAPI"></a>
     <a href="#"><img src="https://img.shields.io/badge/Univer.js-latest-orange" alt="Univer.js"></a>
   </p>
 </div>
@@ -20,6 +24,7 @@
 
 ### :sparkles: 目录 (Table of Contents)
 
+- [🚀 在线体验 & 一键部署](#-在线体验--一键部署)
 - [📖 项目简介](#-项目简介)
 - [✨ 为什么选择 ExcelGenius?](#-为什么选择-excelgenius)
 - [💡 详细文档分析](#-详细文档分析)
@@ -32,6 +37,28 @@
 - [🗺️ 未来路线图 (Roadmap)](#️-未来路线图-roadmap)
 - [🤝 贡献指南](#-贡献指南)
 - [📄 开源许可](#-开源许可)
+
+---
+
+## 🚀 在线体验 & 一键部署
+
+### 在线体验
+
+您无需进行任何本地配置，直接通过以下任一链接即可在线体验`ExcelGenius`的全部核心功能：
+
+> **:point_right: 立即体验: <a href="http://kaaina.dpdns.org" target="_blank">kaaina.dpdns.org</a>**
+>
+> **:point_right: Vercel 备用链接: <a href="https://aiexcleas.vercel.app" target="_blank">aiexcleas.vercel.app</a>**
+
+*请注意：在线体验版可能使用模拟数据模式，具体取决于API密钥的公共配额。*
+
+### Vercel 一键部署
+
+您可以一键将本项目克隆并部署到您自己的 Vercel 账户中，拥有一个私有的、功能完整的 `ExcelGenius` 实例。
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/canyouio/AIEXCLE)
+
+点击上方按钮后，您只需在 Vercel 的配置页面中，将您自己的 `DEEPSEEK_API_KEY` 添加为环境变量，即可完成部署。
 
 ---
 
@@ -54,7 +81,7 @@
 | **创建表格** | 手动输入标题、调整格式、填充数据 | :speech_balloon: **一句话描述**: "创建一个包含员工姓名、部门、职位、入职日期和薪资的表格" |
 | **数据分析** | 筛选、排序、编写复杂的`VLOOKUP`, `SUMIF`公式, 创建数据透视表 | :mag_right: **一键上传**: AI自动分析数据，生成**摘要、洞察、趋势、异常**和**可视化图表** |
 | **在线编辑** | 需要昂贵的Office 365订阅或功能受限的Web版 | :computer: **高性能在线编辑**: 由Univer.js驱动，提供流畅的编辑、保存和实时反馈 |
-| **系统监控** | 需要专业的运维知识来配置和搭建 | :chart_with_upwards_trend: **开箱即用**: 集成Prometheus & Grafana，提供覆盖全链路的专业级监控仪表盘 |
+| **系统监控** | 需要专业的运维知识来配置和搭建 | :chart_with_upwards_trend: **开箱 celtic**: 集成Prometheus & Grafana，提供覆盖全链路的专业级监控仪表盘 |
 
 ---
 
@@ -181,7 +208,7 @@ npm run dev
 
 <div align="center">
   <img src="./docs/img/examples-demo.png" alt="项目首页" width="700" />
-  <p><em>项目 主界面与智能分析</em></p>
+  <p><em>项目主界面与智能分析</em></p>
 </div>
 
 <br>
