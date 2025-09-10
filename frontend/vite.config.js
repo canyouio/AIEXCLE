@@ -15,7 +15,7 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: '../dist',
+    outDir: 'dist',   // 👈 这样输出到 frontend/dist/
     assetsDir: 'assets',
     sourcemap: false,
     rollupOptions: {
@@ -26,6 +26,7 @@ export default defineConfig({
       }
     }
   },
+  
   resolve: {
     alias: {
       '@': '/src'
