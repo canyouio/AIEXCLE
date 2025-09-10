@@ -241,7 +241,7 @@ class GenerateExcelRequest(BaseModel):
     description: str
     file_name: str = None
 
-@app.post("/generate_excel")
+@app.post("/api/generate_excel")
 async def generate_excel(
     request: GenerateExcelRequest
 ):
